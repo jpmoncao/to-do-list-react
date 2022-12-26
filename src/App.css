@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+:root {
+    --bg-color: #f5ebe0;
+    --color1: #3c096c;
+    --color2: #a663cc;
+
+    --dark-bg-color: #22223b;
+    --dark-color1: #9d4edd;
+    --dark-color2: #c8b6ff;
+
+    --default-font: 'Poppins', sans-serif;
+}
+
+main {
+    position: absolute;
+    top: 45vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+
+    padding: 2rem;
+    border: 2px solid var(--color1);
+    border-radius: 8px;
+}
+
+main form {
+    width: 60vw;
+    height: 15vh;
+    padding: 1.5rem 2rem 2rem 2rem;
+    border-radius: .5rem;
+
+    background-color: var(--color1);
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.45);
+}
+
+main form * {
+    margin: 0px 6px;
+}
+
+main form label {
+    display: block;
+    color: var(--color2);
+}
+
+main form input[type="text"],
+main form input[type="button"],
+main form input[type="reset"] {
+    padding: 0.4rem .75rem;
+
+    background-color: var(--color2);
+    font-family: var(--default-font);
+    border-radius: 6px;
+    outline: none;
+    border: none;
+
+    animation-duration: .5s;
+}
+
+main form input[type="text"] {
+    width: 30vw;
+    background-color: white;
+    color: var(--color1);
+}
+
+main form input[type="text"]:focus {
+    box-shadow: 0px 2px 16px #a663cc;
+    animation-duration: .5s;
+}
+
+main form input[type="button"]:hover,
+main form input[type="reset"]:hover {
+    background-color: hsl(278, 65%, 70%);
+    text-decoration: underline;
+    animation-duration: .5s;
+}
+
+main .list-tasks {
+    margin-top: 5rem;
+
+    background-color: white;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.45);
+    border-radius: .5rem;
+    padding: 1rem 2rem;
+
+    min-height: 25vh;
+}
+
+main .list-tasks h1 {
+    margin-bottom: .5rem;
+}
+
+main .list-tasks h2 {
+    margin-bottom: .25rem;
+    font-size: 1.3em;
+}
+
+main .list-tasks-pending,
+main .list-tasks-concluded {
+    text-indent: 1.25em;
+}
+
+main .task {
+    width: 90%;
+    padding: 8px;
+    margin-left: 1.25rem;
+    margin-bottom: .5rem;
+
+    background-color: transparent;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.65);
+    border-radius: 1rem;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+main .task h3:hover {
+    cursor: pointer;
+    color: #3c096c;
+}
+
+main .task p {
+    margin-left: .5em;
+}
+
+main .task button {
+    padding: 3px 4px;
+
+    background-color: var(--color2);
+    border-radius: 6px;
+    border: none;
+
+    align-self: center;
+    margin-right: 2.5rem;
+}
+
+main .task button:hover {
+    background-color: hsl(278, 65%, 70%);
+    animation-duration: .5s;
+}
+
+main .task button:active {
+    transform: translateY(5px);
+    animation-duration: .5s;
+}
+
+main .task.concluded h3 {
+    opacity: .75;
+    text-decoration: line-through;
+}
+
+main .task.concluded h3:hover {
+    cursor: pointer;
+    color: black;
+    opacity: 1;
+}
+
+main .task.concluded p {
+    margin-left: .5em;
+    display: none;
+}
+
+
+/*  ERRO  */
+main #task.error {
+    outline: 2px solid red;
+    box-shadow: 0px 0px 6px hsla(0, 100%, 50%, 0.5);
+}
